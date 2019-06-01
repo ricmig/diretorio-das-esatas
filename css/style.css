@@ -1,0 +1,18 @@
+#inputEsata{
+    height: 40vh;;
+}
+
+#esata1Display, #esata2Display, #esata3Display, #esata4Display, 
+#esata5Display, #esata6Display, #esata7Display, #esata8Display,
+#esata9Display, #esata10Display, #esata11Display, #esata12Display,
+#esata13Display, #esata14Display, #esata15Display, #esata16Display,
+#esata17Display, #esata18Display, #esata19Display, #esata20Display,
+#esata21Display, #esata22Display {
+    display:none;
+}
+
+#tamanhoLetra{
+    font-size: 13px;
+    max-width: 90vw;
+}
+
