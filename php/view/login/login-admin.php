@@ -54,9 +54,12 @@ if($_POST){
                     <input type="hidden" name="adm" value="1">
                     <button type="submit" class="btn btn-primary btn-user btn-block">
                       Login
-                    </button>
+                    </button>                   
                     <hr>
                   </form>
+                  <div class="text-center">
+                    <a class="small" href="../../../index.php">voltar</a>
+                  </div>
                   <hr>
                 </div>
               </div>

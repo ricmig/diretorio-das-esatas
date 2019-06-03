@@ -31,6 +31,10 @@ if($_POST){
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Diretório das Esatas</h1>
                   </div>
+                  <div>
+                <p>Para adicionar uma nova empresa ao Diretório das <abbr title="Empresas de Serviços Auxiliares ao Transporte Aéreo">Esatas</abbr>, você precisa fazer seu cadastro.</p>
+                <p>Clique <a class="small" href="register.php">aqui</a> fazer seu cadastro.</p>
+              </div>
                   <?php if(isset($erro)) : ?>
                       <div class="alert alert-danger" role="alert">
                           Preencha os dados corretamente!
@@ -62,12 +66,16 @@ if($_POST){
                   <div class="text-center">
                     <a class="small" href="register.php">Fazer novo cadastro</a>
                   </div>
+                  <div class="text-center">
+                    <a class="small" href="../../../index.php">voltar</a>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+
     </div>
   </div>
   <script src="../../../js/jquery.min.js"></script>

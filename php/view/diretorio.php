@@ -48,9 +48,9 @@
             <td> <?php echo $value['cnpj']; ?> </td>
             <td> <?php echo $value['razaosocial']; ?> </td>
             <td><?php echo $value['endereco']; ?></td>
-            <td style="text-align:center;"><a class="btn btn-outline-light btn-sm" title="Aeroportos" data-toggle="modal" data-target='#modalAeroporto<?php echo $value['id_esata']; ?>' ><i class="fas fa-list"></i></i></a></td>
-            <td style="text-align:center;"><a class="btn btn-outline-light btn-sm" title="Atividades" data-toggle="modal" data-target='#modalAtividade<?php echo $value['id_esata']; ?>' ><i class="fas fa-list"></i><a></td>
-            <td style="text-align:center;"><a class="btn btn-outline-light btn-sm" title="Atividades" data-toggle="modal" data-target='#modalContatos<?php echo $value['id_esata']; ?>' ><i class="fas fa-list"></i><a></td>
+            <td style="text-align:center; cursor:pointer;"><a class="btn btn-outline-light btn-sm" title="Aeroportos" data-toggle="modal" data-target='#modalAeroporto<?php echo $value['id_esata']; ?>' ><i class="fas fa-list"></i></i></a></td>
+            <td style="text-align:center; cursor:pointer;"><a class="btn btn-outline-light btn-sm" title="Atividades" data-toggle="modal" data-target='#modalAtividade<?php echo $value['id_esata']; ?>' ><i class="fas fa-list"></i><a></td>
+            <td style="text-align:center; cursor:pointer;"><a class="btn btn-outline-light btn-sm" title="Atividades" data-toggle="modal" data-target='#modalContatos<?php echo $value['id_esata']; ?>' ><i class="fas fa-list"></i><a></td>
                     
 <!-- modal aeroporto -->
 <div class="modal fade" id="modalAeroporto<?php echo $value['id_esata']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

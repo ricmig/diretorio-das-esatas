@@ -41,19 +41,19 @@ include '../../controller/cadastrarUsuario2Controller.php';
             </div>
           <?php endif; ?>
               <div>
-                <p>Para realizar seu cadastro para acessar a área administrativa do Diretório das <abb
-                    title="Empresas de Serviços Auxiliares ao Transporte Aéreo">Esatas</abb>, você precisará obter a
+                <p>Para adicionar uma nova empresa ao Diretório das <abb
+                    title="Empresas de Serviços Auxiliares ao Transporte Aéreo">Esatas</abb>, você precisará preencher o cadastro abaixo e aguardar a 
                   liberação do administrador.</p>
-                <p>Preencha as informações abaixo. Caso aprovado, em breve receberá um email de confirmação. Clique <a href="http://www.abesata.org/br/contato/">aqui</a> para entrar em contato conosco.</p>
+                <p>Se aprovado, você receberá um email de confirmação. Clique <a href="http://www.abesata.org/br/contato/">aqui</a> para entrar em contato conosco.</p>
               </div>
               <?php if($validouCadastroU == 1): ?>
           <div class="alert alert-success" role="alert">
-              Informações enviadas com sucesso!
+              <p>Informações enviadas com sucesso!</p>
           </div>
           <?php endif; ?>
           <?php if($validouCadastroU == 2): ?>
           <div class="alert alert-danger" role="alert">
-               <h4>Preencha todos os dados corretamente!</h4>
+               <p>Preencha todos os dados corretamente!</p>
             </div>
           <?php endif; ?>
           <form action="register.php" method="post" class="user">
@@ -100,6 +100,9 @@ include '../../controller/cadastrarUsuario2Controller.php';
             <button type="submit" class="btn btn-primary btn-user btn-lg">Cadastrar</button>
             <hr>
           </form>
+          <div class="text-center">
+                    <a class="small" href="login.php">voltar</a>
+                  </div>
             </div>
           </div>
         </div>
