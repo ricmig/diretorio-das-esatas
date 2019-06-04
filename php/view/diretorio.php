@@ -175,7 +175,7 @@
 </tbody>
 <?php endforeach ; ?>
 </table>
-<a href="login/index.php">voltar</a>                     
+<a href="../../index.php">voltar</a>                     
                   </div>                   
      </div>
   <script src="../../js/jquery.min.js"></script>

@@ -50,30 +50,30 @@ include '../controller/gerenciarEsataUserController.php';
                                   <p>Editar atividades que executa:</p>
                                   <div class=col-12>
                                     <select multiple class="form-control " id="inputAtividade" name="inputAtividade[]">
-                                        <optgroup class="esata1Hide" label=" 1 - Serviços de Natureza Operacional">
-                                            <option value="modalidade-2"> 2 - Abastecimento de Combustível e Lubrificantes</option>
-                                            <option value="modalidade-3"> 3 - Atendimento de Aeronaves</option>
-                                            <option value="modalidade-4">4 - Atendimento e Controle de Desembarque de Passageiros</option>
-                                            <option value="modalidade-5"> 5 - Atendimento e Controle de Embarque de Passageiros</option>
-                                            <option value="modalidade-6">6 - Comissaria</option>
-                                            <option value="modalidade-7"> 7 - Despacho Operacional de Voo</option>
-                                            <option value="modalidade-8"> 8 - Limpeza de Aeronaves</option>
-                                            <option value="modalidade-9">9 - Movimentação de Carga</option>
-                                            <option value="modalidade-10">10 - Reboque de Aeronaves</option>
-                                            <option value="modalidade-11">11 - Transporte de Superfície</option>
+                                        <optgroup class="esata1Hide" label="1 - Serviços de Natureza Operacional">
+                                            <option value="modalidade-2"> 1.1 - Abastecimento de Combustível e Lubrificantes</option>
+                                            <option value="modalidade-3"> 1.2 - Atendimento de Aeronaves</option>
+                                            <option value="modalidade-4"> 1.3 - Atendimento e Controle de Desembarque de Passageiros</option>
+                                            <option value="modalidade-5"> 1.4 - Atendimento e Controle de Embarque de Passageiros</option>
+                                            <option value="modalidade-6"> 1.5 - Comissaria</option>
+                                            <option value="modalidade-7"> 1.6 - Despacho Operacional de Voo</option>
+                                            <option value="modalidade-8">- 1.7 - Limpeza de Aeronaves</option>
+                                            <option value="modalidade-9"> 1.8 - Movimentação de Carga</option>
+                                            <option value="modalidade-10"> 1.9 - Reboque de Aeronaves</option>
+                                            <option value="modalidade-11"> 1.10 - Transporte de Superfície</option>
                                         </optgroup>
-                                        <optgroup class="esata12Hide" label=" 12 - Serviços de Proteção">
-                                            <option value="modalidade-13" >13 - Entrevista de Passageiro</option>
-                                            <option value="modalidade-14" >14 - Inspeção de Passageiro, Tripulante, Bagagem de Mão e Pessoal de Serviço</option>
-                                            <option value="modalidade-15" >15 - Inspeção de Bagagem Despachada</option>
-                                            <option value="modalidade-16" >16 - Proteção de Aeronave Estacionada</option>
-                                            <option value="modalidade-17" >17 - Verificação de Segurança de Aeronave (Varredura)</option>
-                                            <option value="modalidade-18" >18 - Proteção da Carga e Outros Itens</option>
-                                            <option value="modalidade-19" >19 - Controle de Acesso às Áreas Restritas de Segurança</option>
-                                            <option value="modalidade-20" >20 - Patrulha Móvel da Área Operacional</option>
+                                        <optgroup class="esata12Hide" label="2 - Serviços de Proteção">
+                                            <option value="modalidade-13" > 2.1 - Entrevista de Passageiro</option>
+                                            <option value="modalidade-14" > 2.2 - Inspeção de Passageiro, Tripulante, Bagagem de Mão e Pessoal de Serviço</option>
+                                            <option value="modalidade-15" > 2.3 - Inspeção de Bagagem Despachada</option>
+                                            <option value="modalidade-16" > 2.4 - Proteção de Aeronave Estacionada</option>
+                                            <option value="modalidade-17" > 2.5 - Verificação de Segurança de Aeronave (Varredura)</option>
+                                            <option value="modalidade-18" > 2.6 - Proteção da Carga e Outros Itens</option>
+                                            <option value="modalidade-19" > 2.7 Controle de Acesso às Áreas Restritas de Segurança</option>
+                                            <option value="modalidade-20" > 2.8 - Patrulha Móvel da Área Operacional</option>
                                         </optgroup>
-                                      <optgroup class="esata21Hide" label="21 - Serviços Comerciais">
-                                          <option value="modalidade-22" class="esata22Hide">22 - Agenciamento de Carga Aérea</option>
+                                      <optgroup class="esata21Hide" label="3 - Serviços Comerciais">
+                                          <option value="modalidade-22" class="esata22Hide"> 3.1 - Agenciamento de Carga Aérea</option>
                                       </optgroup>
                                     </select>
                                   </div>

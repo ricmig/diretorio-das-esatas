@@ -32,8 +32,7 @@ if($_POST){
                     <h1 class="h4 text-gray-900 mb-4">Diretório das Esatas</h1>
                   </div>
                   <div>
-                <p>Para adicionar uma nova empresa ao Diretório das <abbr title="Empresas de Serviços Auxiliares ao Transporte Aéreo">Esatas</abbr>, você precisa fazer seu cadastro.</p>
-                <p>Clique <a class="small" href="register.php">aqui</a> fazer seu cadastro.</p>
+                <p>Você precisa de uma senha de acesso para cadastrar uma nova empresa ao Diretório das <abbr title="Empresas de Serviços Auxiliares ao Transporte Aéreo">Esatas</abbr> e ter acesso a todas as informações.</p>
               </div>
                   <?php if(isset($erro)) : ?>
                       <div class="alert alert-danger" role="alert">
