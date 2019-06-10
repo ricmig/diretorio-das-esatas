@@ -104,3 +104,52 @@ var displayHide = document.querySelector(".displayHide");
       hideDisplay(esata20Hide, esata20Display);
       hideDisplay(esata21Hide, esata21Display);
       hideDisplay(esata22Hide, esata22Display);
+ 
+ var enviar = false; 
+ var erroLi = document.querySelector('#erros');
+ var inputNome = document.querySelector('#inputNomeFantasia');
+ var inputCnpj = document.querySelector('#inputCNPJ');
+ var inputRazaoSocial = document.querySelector('#inputRazaoSocial');
+
+
+inputNome.onblur = function(){
+    erroLi.innerHTML = '';
+    erronome = document.createElement('li');
+    if(inputNome.value.length <= 5 && inputNome.value != ''){
+        erronome.innerHTML = 'o nome precisa ter no mínimo cinco caracteres';
+        erroLi.classList.add('alert', 'alert-danger');
+        erroLi.appendChild(erronome);
+        } else{
+        erroLi.classList.remove('alert', 'alert-danger');
+        enviar = true;
+    } 
+}
+
+inputCnpj.onblur = function(){
+    erroLi.innerHTML = '';
+    erronome = document.createElement('li');
+    if(inputCnpj.value.length != 14 && inputCnpj.value != '' 
+    ||inputCnpj.value == "00000000000000"
+    ||inputCnpj.value == "11111111111111"
+    ||inputCnpj.value == "22222222222222"
+    ||inputCnpj.value == "33333333333333"
+    ||inputCnpj.value == "44444444444444"
+    ||inputCnpj.value == "55555555555555"
+    ||inputCnpj.value == "66666666666666"
+    ||inputCnpj.value == "77777777777777"
+    ||inputCnpj.value == "88888888888888"
+    ||inputCnpj.value == "99999999999999"
+    ){
+        erronome.innerHTML = 'O cnpj está incorreto. Ele precisa conter 14 caracteres';
+        erroLi.classList.add('alert', 'alert-danger');
+        erroLi.appendChild(erronome);
+        } else{
+        erroLi.classList.remove('alert', 'alert-danger');
+        enviar = true;
+    } 
+}
+
+$("#inputCNPJ").mask("99.999.999/9999-99");
+$("#telefoneEmpresa").mask("(00) 0000-0000");
+$("#telefoneResponsavel").mask("(00) 0000-00000");
+

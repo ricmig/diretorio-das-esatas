@@ -2,10 +2,15 @@
 include '../include/header-user.php';
 include '../controller/cadastrarEsataUsuarioController.php';
 ?>
+
+
 <div class="table-title">
         <div class="row">
            <div class="col-sm-8 mt-3"><h2>Cadastrar Esata</b></h2></div>
         </div>
+        <ul id="erros">
+        
+        </ul>
           <?php if($validouCadastro == 1): ?>
           <div class="alert alert-success" role="alert">
               Informações enviadas com sucesso!
@@ -16,14 +21,14 @@ include '../controller/cadastrarEsataUsuarioController.php';
                Preencha os dados corretamente! 
           </div>
           <?php endif; ?>
-          <form action="cadastrar-esata-user.php" method="post" class="user">
+          <form action="cadastrar-esata-user.php" method="post" class="user" id="form">
             <div class="form-group row">
               <div class="col-sm-6 mb-3 mb-sm-0">
                 <input type="text" class="form-control form-control-user" id="inputNomeFantasia" name="inputNomeFantasia"
                   placeholder="Nome Fantasia">
               </div>
               <div class="col-sm-6">
-                <input type="text" class="form-control form-control-user" id="inputCNPJ" name="inputCNPJ" placeholder="CNPJ">
+                <input type="text" class="form-control form-control-user" id="inputCNPJ" name="inputCNPJ"  placeholder="CNPJ">
               </div>
             </div>
             <div class="form-group">
@@ -40,30 +45,31 @@ include '../controller/cadastrarEsataUsuarioController.php';
                   <div class=col-6>
                     <select multiple class="form-control " id="inputEsata" name="inputEsata[]">
                     <p>Escolha a atividade</p>
-                      <optgroup class="esata1Hide" label=" 1 - Serviços de Natureza Operacional">
-                          <option value="modalidade-2" class="esata2Hide">2 - Abastecimento de Combustível e Lubrificantes</option>
-                          <option value="modalidade-3" class="esata3Hide">3 - Atendimento de Aeronaves</option>
-                          <option value="modalidade-4" class="esata4Hide">4 - Atendimento e Controle de Desembarque de Passageiros</option>
-                          <option value="modalidade-5" class="esata5Hide">5 - Atendimento e Controle de Embarque de Passageiros</option>
-                          <option value="modalidade-6" class="esata6Hide">6 - Comissaria</option>
-                          <option value="modalidade-7" class="esata7Hide">7 - Despacho Operacional de Voo</option>
-                          <option value="modalidade-8" class="esata8Hide">8 - Limpeza de Aeronaves</option>
-                          <option value="modalidade-9" class="esata9Hide">9 - Movimentação de Carga</option>
-                          <option value="modalidade-10" class="esata10Hide">10 - Reboque de Aeronaves</option>
-                          <option value="modalidade-11"class="esata11Hide">11 - Transporte de Superfície</option>
+                    <option selected value="1"></option>
+                      <optgroup class="esata1Hide" label="Serviços de Natureza Operacional">
+                          <option value="modalidade-2" class="esata2Hide">Abastecimento de Combustível e Lubrificantes</option>
+                          <option value="modalidade-3" class="esata3Hide">Atendimento de Aeronaves</option>
+                          <option value="modalidade-4" class="esata4Hide">Atendimento e Controle de Desembarque de Passageiros</option>
+                          <option value="modalidade-5" class="esata5Hide">Atendimento e Controle de Embarque de Passageiros</option>
+                          <option value="modalidade-6" class="esata6Hide">Comissaria</option>
+                          <option value="modalidade-7" class="esata7Hide">Despacho Operacional de Voo</option>
+                          <option value="modalidade-8" class="esata8Hide">Limpeza de Aeronaves</option>
+                          <option value="modalidade-9" class="esata9Hide">Movimentação de Carga</option>
+                          <option value="modalidade-10" class="esata10Hide">Reboque de Aeronaves</option>
+                          <option value="modalidade-11"class="esata11Hide">Transporte de Superfície</option>
                       </optgroup>
-                      <optgroup class="esata12Hide" label=" 12 - Serviços de Proteção">
-                          <option value="modalidade-13" class="esata13Hide">13 - Entrevista de Passageiro</option>
-                          <option value="modalidade-14" class="esata14Hide">14 - Inspeção de Passageiro, Tripulante, Bagagem de Mão e Pessoal de Serviço</option>
-                          <option value="modalidade-15" class="esata15Hide">15 - Inspeção de Bagagem Despachada</option>
-                          <option value="modalidade-16" class="esata16Hide">16 - Proteção de Aeronave Estacionada</option>
-                          <option value="modalidade-17" class="esata17Hide">17 - Verificação de Segurança de Aeronave (Varredura)</option>
-                          <option value="modalidade-18" class="esata18Hide">18 - Proteção da Carga e Outros Itens</option>
-                          <option value="modalidade-19" class="esata19Hide">19 - Controle de Acesso às Áreas Restritas de Segurança</option>
-                          <option value="modalidade-20" class="esata20Hide">20 - Patrulha Móvel da Área Operacional</option>
+                      <optgroup class="esata12Hide" label="Serviços de Proteção">
+                          <option value="modalidade-13" class="esata13Hide">Entrevista de Passageiro</option>
+                          <option value="modalidade-14" class="esata14Hide">Inspeção de Passageiro, Tripulante, Bagagem de Mão e Pessoal de Serviço</option>
+                          <option value="modalidade-15" class="esata15Hide">Inspeção de Bagagem Despachada</option>
+                          <option value="modalidade-16" class="esata16Hide">Proteção de Aeronave Estacionada</option>
+                          <option value="modalidade-17" class="esata17Hide">Verificação de Segurança de Aeronave (Varredura)</option>
+                          <option value="modalidade-18" class="esata18Hide">Proteção da Carga e Outros Itens</option>
+                          <option value="modalidade-19" class="esata19Hide">Controle de Acesso às Áreas Restritas de Segurança</option>
+                          <option value="modalidade-20" class="esata20Hide">Patrulha Móvel da Área Operacional</option>
                       </optgroup>
-                      <optgroup class="esata21Hide" label="21 - Serviços Comerciais">
-                          <option value="modalidade-22" class="esata22Hide">22 - Agenciamento de Carga Aérea</option>
+                      <optgroup class="esata21Hide" label="Serviços Comerciais">
+                          <option value="modalidade-22" class="esata22Hide">Agenciamento de Carga Aérea</option>
                       </optgroup>
                     </select>
                   </div>
@@ -208,11 +214,11 @@ include '../controller/cadastrarEsataUsuarioController.php';
                       <hr>
                       <div class="form-group row">
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                          <input type="text" class="form-control form-control-user" name="inputTelefoneEmpresa"
+                          <input type="text" class="form-control form-control-user" id="telefoneEmpresa" name="inputTelefoneEmpresa"
                             placeholder="Telefone da Empresa">
                         </div>
                         <div class="col-sm-6">
-                          <input type="text" class="form-control form-control-user" name="inputEmailEmpresa" 
+                          <input type="email" class="form-control form-control-user" name="inputEmailEmpresa" 
                             placeholder="Email da Empresa">
                         </div>
                       </div>
@@ -223,7 +229,7 @@ include '../controller/cadastrarEsataUsuarioController.php';
                       </div>      
                       <div class="form-group row">
                         <div class="col-sm-6 mb-3 mb-sm-0">
-                          <input type="text" class="form-control form-control-user" name="inputTelefoneResponsavel" 
+                          <input type="text" class="form-control form-control-user" id="telefoneResponsavel" name="inputTelefoneResponsavel" 
                             placeholder="Telefone do Responsável">
                         </div>
                         <div class="col-sm-6">
@@ -238,7 +244,12 @@ include '../controller/cadastrarEsataUsuarioController.php';
           </form>
         </div>
       </div>
+      <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+      script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+
       <script src="../../js/main.js"></script>
+      
                    
 <?php 
         include '../include/footer.php';

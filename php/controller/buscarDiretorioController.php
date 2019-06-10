@@ -115,26 +115,16 @@ function pegarAeroportos(){
     
     pegarAeroportos();
 
-    if(isset($_GET["aeroportoFiltro"]) && $_GET["aeroportoFiltro"] == "todas" && $_GET["modalidadeFiltro"] == 'todas'){
+    if(isset($_GET["aeroportoFiltro"]) && $_GET["aeroportoFiltro"] == "todas"){
         $selectAeroporto = 0;
         $selectModalidade = 0;
         $filtroAeroporto = 0;
-    }elseif(isset($_GET["aeroportoFiltro"]) && $_GET["modalidadeFiltro"] == 'todas'){
+    }elseif(isset($_GET["aeroportoFiltro"])){
         pegarNomeAero($_GET["aeroportoFiltro"]);
         filtrarAeroportos($_GET["aeroportoFiltro"]);
         $selectAeroporto = 1;
         $filtroAeroporto = 1;
-    } elseif(isset($_GET["aeroportoFiltro"]) && $_GET["aeroportoFiltro"] == 'todas' && $_GET["modalidadeFiltro"] != 'todas'){
-        filtrarEsata($_GET['modalidadeFiltro']);
-        $selectModalidade = 1;
-        $filtroAeroporto = 2;
-    } elseif (isset($_GET["aeroportoFiltro"]) && $_GET["aeroportoFiltro"] != 'todas' && $_GET["modalidadeFiltro"] != 'todas'){
-        filtrarAeroportos($_GET["aeroportoFiltro"]);
-        filtrarEsata($_GET["modalidadeFiltro"]);
-        pegarNomeAero($_GET["aeroportoFiltro"]);
-        filtrarAeroportoEsata($esatasBuscadasPorAeroporto, $esatasBuscadasporModalidade);    
-        $filtroAeroporto = 3;
-    }
+    } 
     
 
 ?>

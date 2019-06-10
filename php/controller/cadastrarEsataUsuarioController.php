@@ -69,7 +69,7 @@ function adicionarEsata($arrayAssocEsata){
     if($inputNomeFantasia == null || $inputCNPJ == null || 
         $inputRazaoSocial == null || $inputEmailEmpresa == null
         || !filter_var($inputEmailEmpresa, FILTER_VALIDATE_EMAIL) 
-        || $inputEndereco == null || $inputEsata == null 
+        || $inputEndereco == null || $inputEsata == '1' 
         || $inputNomeResponsavel == null){
         $validouCadastro = 2;
     } else 

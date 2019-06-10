@@ -1,6 +1,6 @@
 <?php
     include '../controller/gerenciarEsataController.php';
-    include '../controller/buscarAeroportosController.php';
+    include '../controller/buscarDiretorioController.php';
 ?> 
 
 <!DOCTYPE html>
