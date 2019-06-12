@@ -63,7 +63,7 @@ $validouCadastroU = null;
         
 
     if($inputPrimeiroNome == null || $inputUltimoNome == null || 
-    strlen($inputTelefone) != 9 || $inputAeroporto == null 
+    strlen($inputTelefone) <= 8 || strlen($inputTelefone) >= 13 || $inputAeroporto == null 
     || $inputEmail == null || $inputSenha == null || !filter_var($inputEmail, FILTER_VALIDATE_EMAIL)
     ){
         $validouCadastroU = 2;

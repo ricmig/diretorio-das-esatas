@@ -35,6 +35,9 @@ include '../../controller/cadastrarUsuario2Controller.php';
             <div class="alert alert-success" role="alert">
               Informações enviadas com sucesso!
           </div>
+          <ul id="erros">
+          
+          </ul>
           <?php elseif(isset($_SESSION["erro"])): ?>
           <div class="alert alert-danger" role="alert">
                <h4>Preencha todos os dados corretamente!</h4>
@@ -113,5 +116,8 @@ include '../../controller/cadastrarUsuario2Controller.php';
   <script src="../../../js/jquery.min.js"></script>
   <script src="../../../js/bootstrap.bundle.min.js"></script>
   <script src="../../../js/sb-admin-2.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
+<script src="../../../js/register.js"></script>
 </body>
 </html>
